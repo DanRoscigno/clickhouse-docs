@@ -22,7 +22,21 @@ const config = {
     '/docs/js/analytics.js',
   ],
   presets: [
-    [
+  [
+    'redocusaurus',
+    {
+        specs: [
+          {
+            spec: 'openapi/staging.yaml',
+          },
+        ],
+      theme: {
+        primaryColor: '#F46665',
+        redocOptions: { disableSearch: false, suppressWarnings: false, hideDownloadButton: false },
+      }
+    }
+  ],
+  [
       'classic',
       /** @type {import('@docusaurus/preset-classic').Options} */
       ({
